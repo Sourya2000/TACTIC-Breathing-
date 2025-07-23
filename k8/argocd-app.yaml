@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tactic-app
+  name: tactic-breathing
   namespace: argocd
 spec:
   destination:
