@@ -1,0 +1,10 @@
+version: '3'
+services:
+  frontend:
+    build: ./sensor-stream
+    ports:
+      - "3000:80"
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
