@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tactic-app
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/Sourya2000/TACTIC-Breathing
+    targetRevision: HEAD
+    path: k8
+  project: default
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
